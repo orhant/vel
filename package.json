@@ -6,9 +6,11 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "bootstrap": "5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.63.3",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -26,6 +28,10 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "resolutions": {
+    "moment": "2.29.1",
+    "autoprefixer": "10.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
