@@ -7,7 +7,7 @@ import AppContextProvider from '@hap/utility/AppContextProvider';
 import AppLocaleProvider from '@hap/utility/AppLocaleProvider';
 
 import configureStore, {history} from 'redux/store';
-import JWTAuthAuthProvider from 'services/auth/jwt-auth/JWTAuthProvider';
+import JWTAuthAuthProvider from '@hap/services/auth/jwt-auth/JWTAuthProvider';
 
 const store = configureStore();
 
