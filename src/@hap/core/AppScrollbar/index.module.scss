@@ -1,0 +1,16 @@
+.dataSimplebar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  & :global(.simplebar-offset),
+  & :global(.simplebar-content-wrapper),
+  & :global(.simplebar-content),
+  & [aria-label='scrollable content'],
+  & [aria-label='scrollable content'] > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+}

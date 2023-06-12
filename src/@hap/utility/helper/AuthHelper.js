@@ -1,5 +1,5 @@
 import {authRole} from '../../../shared/constants/AppConst';
-
+import avatar from '../../../assets/images/users/user-dummy-img.jpg';
 export const getUserFromAuth0 = (user) => {
   if (user)
     return {
@@ -41,12 +41,13 @@ export const getUserFromAWS = (user) => {
 export const getUserFromJwtAuth = (user) => {
   if (user)
     return {
-      id: 1,
-      uid: user._id,
-      displayName: user.name,
+      id: user.id,
+      uid: user.id,
+      displayName: user.username,
       email: user.email,
-      photoURL: user.avatar,
-      role: authRole.user,
+      photoURL: avatar,
+      role: authRole.User,
+      // role: authRole.Admin,
     };
   return user;
 };

@@ -1,0 +1,14 @@
+.auth {
+  position: relative;
+
+  & .main-content-view {
+    padding: 20px;
+  }
+}
+
+.authScroll {
+  & [aria-label='scrollable content'],
+  & [aria-label='scrollable content'] > div {
+    height: 100% !important;
+  }
+}
