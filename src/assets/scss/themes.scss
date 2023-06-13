@@ -1,16 +1,15 @@
-@import "../scss/icons.scss";
-@import "../scss/config/default/bootstrap.scss";
-@import "../scss/config/default/app.scss";
-@import "../scss/config/default/custom.scss";
-@import"./shepherd.css";
-@import "./mermaid.min.css";
+@import '../scss/icons.scss';
+@import '../scss/config/default/bootstrap.scss';
+@import '../scss/config/default/app.scss';
+@import '../scss/config/default/custom.scss';
+@import './shepherd.css';
+@import './mermaid.min.css';
 
-//RTL 
+//RTL
 // @import "../scss/rtl/components-rtl";
 // @import "../scss/rtl/layouts-rtl";
 // @import "../scss/rtl/plugins-rtl";
 // @import "../scss/rtl/pages-rtl";
-
 
 //Rigthsidebar offcanvas
 .offcanvas-header-dark {
@@ -88,8 +87,8 @@ body {
 
   .fc {
     .fc-toolbar {
-      >* {
-        >* {
+      > * {
+        > * {
           float: none;
         }
       }
@@ -122,11 +121,10 @@ body {
 //   max-height: 43px !important;
 // }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
   .simplebar-track-#{$color} {
     .simplebar-scrollbar:before {
-      background: $value  !important;
+      background: $value !important;
     }
   }
 }
@@ -144,7 +142,7 @@ $value in $theme-colors {
   height: 250px !important;
 }
 
-[data-layout="horizontal"] .chat-conversation{
+[data-layout='horizontal'] .chat-conversation {
   &.chatwidgets {
     height: 250px !important;
   }
@@ -189,31 +187,52 @@ $value in $theme-colors {
 
 // Tranfer List
 
-.rdl-filter, .rdl-control{
+.rdl-filter,
+.rdl-control {
   background-color: $input-bg;
   border: 1px solid $input-border-color !important;
   color: $input-color !important;
 }
 
-.rdl-move{
+.rdl-move {
   background: var(--#{$prefix}light) !important;
   border: 1px solid var(--#{$prefix}light) !important;
   color: var(--#{$prefix}body-color) !important;
 }
 
 .react-dual-listbox {
-  input:disabled, select:disabled{
+  input:disabled,
+  select:disabled {
     background-color: $input-disabled-bg !important;
     border: 1px solid $input-border-color !important;
   }
 }
 
-.css-26l3qy-menu{
+.css-26l3qy-menu {
   background-color: var(--#{$prefix}gray-200) !important;
   border-color: var(--#{$prefix}border-color) !important;
 }
 
-.css-1n7v3ny-option{
+.css-1n7v3ny-option {
   background-color: var(--#{$prefix}gray-300) !important;
   border-color: var(--#{$prefix}border-color) !important;
+}
+.test {
+  fill: var(--vz-body-bg);
+}
+.svg-body-color {
+  fill: var(--vz-body-bg);
+}
+
+.veo-text-inject-2 {
+  fill: var(--vz-body-color);
+}
+.veo-padlock-inject-2 {
+  stroke: var(--vz-body-color);
+}
+#freepik--Floor--inject-3 {
+  stroke: var(--vz-body-color);
+}
+#freepik--Plants--inject-3 {
+  stroke: var(--vz-body-color);
 }

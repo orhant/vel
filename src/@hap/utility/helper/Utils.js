@@ -69,3 +69,12 @@ export function IntlGlobalProvider({children}) {
 export const appIntl = () => {
   return intl;
 };
+
+/**
+ * Changes the body attribute
+ */
+export const changeHTMLAttribute = (attribute, value) => {
+  if (document.documentElement)
+    document.documentElement.setAttribute(attribute, value);
+  return true;
+};

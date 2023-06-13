@@ -72,7 +72,7 @@ const Signin = () => {
                       <div className='text-center mt-2'>
                         <h5 className='text-primary'>Hoşgeldiniz !</h5>
                         <p className='text-muted'>
-                          HAPa devam etmek için giriş yapın.
+                          HAP a devam etmek için giriş yapın.
                         </p>
                       </div>
 

@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Col, Container, Row} from 'reactstrap';
 import {useAuthUser} from '@hap/utility/AuthHooks';
+import Section from './Section';
 
 const Analytics = () => {
   const {user} = useAuthUser();
+  const [rightColumn, setRightColumn] = useState(true);
+  const toggleRightColumn = () => {
+    setRightColumn(!rightColumn);
+  };
   console.log(user);
   return (
-    <div>
-      <lord-icon
-        className='avatar-xl'
-        src='https://cdn.lordicon.com/spxnqpau.json'
-        trigger='loop'
-        colors='primary:#405189,secondary:#0ab39c'
-        style={{width: '120px', height: '120px'}}
-      ></lord-icon>
-    </div>
+    <React.Fragment>
+      <Container fluid>
+        <Row>
+          <Col>
+            {' '}
+            <div className='h-100'>
+              <Section rightClickBtn={toggleRightColumn} />
+            </div>{' '}
+          </Col>
+        </Row>
+      </Container>
+    </React.Fragment>
   );
 };
 

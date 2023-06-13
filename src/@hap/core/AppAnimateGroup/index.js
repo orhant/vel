@@ -10,6 +10,8 @@ const AppAnimateGroup = (props) => {
         display: 'flex',
         flexDirection: 'column',
         height: height,
+        margin: '20px 0',
+
         ...animateStyle,
       }}
       {...rest}
