@@ -8,10 +8,11 @@ import {
   Label,
   Row,
   Button,
+  UncontrolledAlert,
 } from 'reactstrap';
 
 import {useAuthMethod} from '@hap/utility/AuthHooks';
-
+import {useSelector} from 'react-redux';
 import {Link, useNavigate} from 'react-router-dom';
 import {Form, Formik, Field} from 'formik';
 import * as yup from 'yup';
@@ -25,7 +26,7 @@ import logoLight from '../../../assets/images/logo-light.png';
 
 const Signin = () => {
   const navigate = useNavigate();
-
+  const {error} = useSelector(({common}) => common);
   const onGoToForgetPassword = () => {
     navigate('/forget-password', {tab: 'jwtAuth'});
   };
@@ -75,7 +76,11 @@ const Signin = () => {
                           HAP a devam etmek için giriş yapın.
                         </p>
                       </div>
-
+                      {error && error ? (
+                        <UncontrolledAlert color='danger'>
+                          <b>{error} </b> — check it out!
+                        </UncontrolledAlert>
+                      ) : null}
                       <div className='p-2 mt-4'>
                         <Formik
                           validateOnChange={true}

@@ -236,3 +236,19 @@ body {
 #freepik--Plants--inject-3 {
   stroke: var(--vz-body-color);
 }
+
+.main-content {
+  height: calc(100vh - 438px);
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+// html {
+//   scroll-behavior: unset !important;
+// }

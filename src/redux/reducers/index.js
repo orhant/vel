@@ -3,8 +3,9 @@ import {connectRouter} from 'connected-react-router';
 // import Settings from './Setting';
 import Common from './Common';
 import Layouts from './Layouts';
-// import ToDoApp from './ToDoApp';
-// import MailApp from './MailApp';
+import Financials from './Financials';
+import Disclosure from './Disclosure';
+import Template from './Template';
 // import ContactApp from './ContactApp';
 // import ScrumboardApp from './ScrumboardApp';
 // import Ecommerce from './Ecommerce';
@@ -18,7 +19,9 @@ const reducers = (history) =>
     layout: Layouts,
     // dashboard: Dashboard,
     common: Common,
-    // todoApp: ToDoApp,
+    disclosure: Disclosure,
+    financials: Financials,
+    template: Template,
     // mailApp: MailApp,
     // userList: UserList,
     // contactApp: ContactApp,

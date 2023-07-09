@@ -1,0 +1,46 @@
+@mixin set-side-length($side){
+  width: $side;
+  height: $side;
+
+  &::before,
+  &::after {
+    width: $side;
+    height: $side;
+  }
+}
+
+
+@mixin loader-adjust-hue(){
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    border-radius: 50%;
+  }
+
+  &::before {
+    border: $loader-adjust-hue-ring-wide solid $loader-adjust-hue-ring-color;
+  }
+
+  &::after {
+    border-width: $loader-adjust-hue-ring-wide;
+    border-style: solid;
+    border-color: $loader-adjust-hue-ring-active-color transparent transparent;
+    animation: loaderSpin $loader-duration-normal infinite linear;
+  }
+}
+
+//** Loader
+//========================
+@keyframes loaderSpin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

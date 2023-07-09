@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {useSelector, useDispatch} from 'react-redux';
+import StockSelect from 'components/form/StockSelect';
 
 import {changeSidebarVisibility} from 'redux/actions';
 
 import LightDark from './AppHeaderComponents/LightDark';
 import FullScreenDropdown from './AppHeaderComponents/FullScreenDropdown';
 import ProfileDropdown from './AppHeaderComponents/ProfileDropdown';
+import DisclosureListDropdown from './AppHeaderComponents/DisclosureListDropdown';
+import NotificationDropdown from './AppHeaderComponents/NotificationDropdown';
 
 const AppHeader = ({onChangeLayoutMode, layoutModeType, headerClass}) => {
   const dispatch = useDispatch();
@@ -74,6 +77,15 @@ const AppHeader = ({onChangeLayoutMode, layoutModeType, headerClass}) => {
                 <span></span>
               </span>
             </button>
+            <div className='app-search d-none d-md-block '>
+              <StockSelect />
+            </div>
+            <div className='d-flex align-items-center '>
+              <DisclosureListDropdown />
+            </div>
+            <div className='d-flex align-items-center '>
+              <NotificationDropdown />
+            </div>
           </div>
           <div className='d-flex align-items-center'>
             <FullScreenDropdown />

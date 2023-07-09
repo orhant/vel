@@ -20,10 +20,14 @@
   }
 }
 
+// .page-content {
+//   padding: calc(#{$header-height} + #{$grid-gutter-width})
+//     calc(#{$grid-gutter-width} * 0.5) $footer-height
+//     calc(#{$grid-gutter-width} * 0.5);
+// }
 .page-content {
   padding: calc(#{$header-height} + #{$grid-gutter-width})
-    calc(#{$grid-gutter-width} * 0.5) $footer-height
-    calc(#{$grid-gutter-width} * 0.5);
+    calc(#{$grid-gutter-width} * 0.5) 4px calc(#{$grid-gutter-width} * 0.5);
 }
 
 .navbar-menu {

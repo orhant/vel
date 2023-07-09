@@ -135,15 +135,12 @@ const AppLayout = () => {
             onChangeLayoutMode={onChangeLayoutMode}
           />
           <AppSidebar layoutType={layoutType} />
-          <AppScrollbar
-            className={clsx(styles.authScroll, 'd-flex flex-column min-vh-100')}
-          >
-            <div className='main-content'>
-              <div className='page-content'>
-                <AppContentView />
-              </div>
+
+          <div className='main-content'>
+            <div className='page-content'>
+              <AppContentView />
             </div>
-          </AppScrollbar>
+          </div>
         </div>
       ) : (
         <div className={clsx(styles.auth, 'd-flex flex-column min-vh-100')}>

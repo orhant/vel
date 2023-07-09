@@ -7,7 +7,15 @@ const jwtAxios = axios.create({
   },
 });
 jwtAxios.interceptors.response.use(
-  (res) => res,
+  (response) => {
+    const statusCode = response.data.code;
+    if (statusCode !== 0) {
+      return Promise.reject(
+        new Error(response?.data?.message || 'Invalid response status code'),
+      );
+    }
+    return response;
+  },
   (err) => {
     if (err.response && err.response.data.msg === 'Token is not valid') {
       console.log('Need to logout user');

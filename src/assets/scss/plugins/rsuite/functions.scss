@@ -1,0 +1,25 @@
+
+@mixin box-shadow($x:0px, $y:2px, $blur:3px, $color:rgba(0, 0, 0, 0.28)){
+    -moz-box-shadow: $x $y  $blur $color;
+    -webkit-box-shadow: $x $y  $blur $color;;
+    box-shadow: $x $y  $blur $color;;
+    
+}
+@mixin ellipsis-basic(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+@mixin ellipsis($substract:0){
+    @include ellipsis-basic();
+    width: 100% - $substract;
+}
+
+@mixin user-select(){
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}

@@ -3,7 +3,9 @@ import React from 'react';
 import {Col, Row} from 'reactstrap';
 // import Flatpickr from 'react-flatpickr';
 
-const Section = (props) => {
+import StockSelect from 'components/form/StockSelect';
+
+const Section = () => {
   return (
     <React.Fragment>
       <Row className='mb-3 pb-1'>
@@ -20,30 +22,23 @@ const Section = (props) => {
                 <Row className='g-3 mb-0 align-items-center'>
                   <div className='col-sm-auto'>
                     <div className='input-group'>
-                      {/* <Flatpickr
-                        className='form-control border-0 dash-filter-picker shadow'
-                        options={{
-                          mode: 'range',
-                          dateFormat: 'd M, Y',
-                          defaultDate: ['01 Jan 2022', '31 Jan 2022'],
-                        }}
-                      /> */}
-                      <div className='input-group-text bg-primary border-primary text-white'>
+                      <StockSelect />
+                      {/* <div className='input-group-text bg-primary border-primary text-white'>
                         <i className='ri-calendar-2-line'></i>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
-                  <div className='col-auto'>
+                  {/* <div className='col-auto'>
                     <button type='button' className='btn btn-soft-success'>
                       <i className='ri-add-circle-line align-middle me-1'></i>{' '}
                       Add Product
                     </button>
-                  </div>
+                  </div> */}
                   <div className='col-auto'>
                     <button
                       type='button'
                       className='btn btn-soft-info btn-icon waves-effect waves-light layout-rightside-btn'
-                      onClick={props.rightClickBtn}
+                      // onClick={props.rightClickBtn}
                     >
                       <i className='ri-pulse-line'></i>
                     </button>

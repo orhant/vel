@@ -5,8 +5,7 @@ import SimpleBarReact from 'simplebar-react';
 import styles from './index.module.scss';
 import clsx from 'clsx';
 
-const AppScrollbar = ({children, scrollToTop, className, ...others}) => {
-  console.log(scrollToTop);
+const AppScrollbar = ({children, className, ...others}) => {
   return (
     <SimpleBarReact
       {...others}

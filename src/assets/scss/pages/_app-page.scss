@@ -1,0 +1,218 @@
+//
+// _app-page.scss
+//
+.app-page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+// chat left sidebar
+
+// .app-page-leftsidebar {
+//   height: calc(100vh - 137px);
+//   position: relative;
+//   background-color: var(--#{$prefix}card-bg-custom);
+
+//   @media (min-width: 992px) {
+//     min-width: 300px;
+//     max-width: 300px;
+//     height: calc(100vh - #{$header-height} - #{$footer-height} - 8px);
+//   }
+// }
+.app-page-menu {
+  max-height: calc(100vh - 320px);
+
+  @media (max-width: 991.98px) {
+    height: calc(100vh - 396px);
+  }
+
+  li {
+    padding: 5px 0px;
+
+    a {
+      color: var(--#{$prefix}dark);
+      font-weight: $font-weight-medium;
+      transition: all 0.5s ease;
+
+      &.active,
+      &:hover,
+      &[aria-expanded='true'] {
+        color: $success;
+      }
+    }
+
+    .sub-menu {
+      li {
+        padding-left: 25px;
+        position: relative;
+
+        &::before {
+          content: '\f0374';
+          position: absolute;
+          left: 0px;
+          font-family: Material Design Icons;
+          color: rgba(var(--#{$prefix}dark-rgb), 0.4);
+        }
+      }
+    }
+  }
+}
+
+.app-page-sidebar {
+  position: relative;
+  //background-color: var(--#{$prefix}card-bg-custom);
+  overflow: auto;
+  @media (min-width: 992px) {
+    min-width: 300px;
+    max-width: 300px;
+    height: calc(100vh - #{$header-height} - 38px);
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--#{$prefix}dark-rgb), 0.075);
+    border-radius: 10px;
+    border: 2px solid var(--#{$prefix}card-bg-custom);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--#{$prefix}card-bg-custom);
+  }
+  @media (max-width: 991.98px) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    max-width: 100%;
+    z-index: 1003;
+    box-shadow: $box-shadow-lg;
+    transform: translateX(-100%);
+    visibility: hidden;
+    height: 100vh;
+
+    &.menubar-show {
+      visibility: visible;
+      transform: none;
+    }
+  }
+}
+
+.file-menu-sidebar-scroll {
+  height: calc(100vh - 375px);
+  @media (max-width: 991.98px) {
+    height: calc(100vh - 220px);
+  }
+}
+
+.app-page-content {
+  background-color: var(--#{$prefix}card-bg-custom);
+  height: calc(100vh - 110px);
+  overflow: hidden;
+}
+
+.app-page-content-scroll {
+  height: calc(100vh - 164px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--#{$prefix}dark-rgb), 0.075);
+    border-radius: 10px;
+    border: 2px solid var(--#{$prefix}card-bg-custom);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--#{$prefix}card-bg-custom);
+  }
+  @media (max-width: 991.98px) {
+    height: calc(100vh - 144px);
+  }
+
+  .simplebar-content {
+    height: 100%;
+  }
+}
+
+.file-detail-content-scroll {
+  height: calc(100vh - 180px);
+  @media (max-width: 991.98px) {
+    height: 100vh;
+  }
+
+  .simplebar-content {
+    height: 100%;
+  }
+}
+
+.app-page-detail-content {
+  width: 32%;
+  max-width: 100%;
+  background-color: var(--#{$prefix}card-bg-custom);
+  display: none;
+}
+
+.file-detail-show {
+  .app-page-detail-content {
+    display: block;
+  }
+}
+
+#file-overview {
+  display: none;
+}
+
+@media (max-width: 1399.98px) {
+  .app-page-detail-content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    width: 400px;
+    max-width: 100%;
+    z-index: 1003;
+    box-shadow: $box-shadow-lg;
+    transform: translateX(100%);
+  }
+
+  .file-detail-show {
+    .app-page-detail-content {
+      transform: none;
+    }
+  }
+}
+
+.file-details-box {
+  height: 195px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+}

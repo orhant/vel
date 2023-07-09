@@ -79,7 +79,7 @@ const JWTAuthAuthProvider = ({children}) => {
       });
       dispatch({
         type: FETCH_ERROR,
-        payload: error?.response?.data?.error || 'Something went wrong',
+        payload: error?.message || 'Something went wrong',
       });
     }
   };

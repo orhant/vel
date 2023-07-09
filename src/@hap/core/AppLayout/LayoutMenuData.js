@@ -151,8 +151,14 @@ const Navdata = () => {
       },
       subItems: [
         {
+          id: 'templaeteedit',
+          label: 'Bilanço Template Düzenle',
+          link: '/admin/templateedit',
+          parentId: 'dashboard',
+        },
+        {
           id: 'analytics',
-          label: 'Analytics',
+          label: 'Analyticsp',
           link: '/dashboards/analytics',
           parentId: 'dashboard',
         },

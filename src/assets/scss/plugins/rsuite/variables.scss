@@ -1,0 +1,18 @@
+$H500: #34c3ff;
+$B050: #f7f7fa;
+$B500: #a6a6a6;
+
+$prefix: rsuite-;
+$border-color: var(--vz-border-color);
+$head-background: rgba(var(--vz-dark-rgb), 0.05);
+$body-background: var(--vz-header-bg);
+$pagination-background: #f5f5f5;
+$resize-mouse-color: $H500;
+$row-hover-color: rgba(var(--vz-light-rgb), 1);
+
+// Loader
+
+$loader-adjust-hue-ring-wide: 3px;
+$loader-adjust-hue-ring-color: fade($B050, 80);
+$loader-adjust-hue-ring-active-color: $B500;
+$loader-duration-normal: 0.6s;

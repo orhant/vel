@@ -6,6 +6,7 @@ import {authRouteConfig} from './auth';
 import Error403 from './errorPages/Error403';
 import {errorPagesConfigs} from './errorPages';
 import {dashBoardConfigs} from './dashboards';
+import {adminRouteConfig} from './admin';
 // import {extraPagesConfigs} from './extraPages';
 // import {ecommerceConfig} from './ecommerce';
 // import {userListConfig} from './userList';
@@ -20,7 +21,7 @@ const authorizedStructure = {
   unAuthorizedComponent: <Error403 />,
   routes: [
     ...dashBoardConfigs,
-    // ...accountPagesConfigs,
+    ...adminRouteConfig,
     // ...appsConfig,
     // ...thirdPartyConfigs,
     // ...extraPagesConfigs,

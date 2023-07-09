@@ -6,6 +6,8 @@ import {
   SHOW_MESSAGE,
   TOGGLE_APP_DRAWER,
   UPDATING_CONTENT,
+  SET_CURRENT_STOCK,
+  GET_STOCK_LIST,
 } from 'shared/constants/ActionTypes';
 
 const INIT_STATE = {
@@ -14,6 +16,7 @@ const INIT_STATE = {
   isAppDrawerOpen: false,
   updatingContent: false,
   message: '',
+  currentStock: false,
 };
 
 const commonReducer = (state = INIT_STATE, action) => {
@@ -66,6 +69,16 @@ const commonReducer = (state = INIT_STATE, action) => {
         isAppDrawerOpen: !state.isAppDrawerOpen,
       };
     }
+    case GET_STOCK_LIST:
+      return {
+        ...state,
+        stockList: action.payload,
+      };
+    case SET_CURRENT_STOCK:
+      return {
+        ...state,
+        currentStock: action.payload ? action.payload : INIT_STATE.currentStock,
+      };
     default:
       return state;
   }
